@@ -1,0 +1,41 @@
+{
+  "kind": "collectionType",
+  "collectionName": "messages",
+  "info": {
+    "name": "Message"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true,
+      "maxLength": 255
+    },
+    "email": {
+      "type": "email",
+      "required": true,
+      "maxLength": 255
+    },
+    "organization": {
+      "type": "string",
+      "required": false,
+      "maxLength": 255
+    },
+    "phone": {
+      "type": "string",
+      "maxLength": 255
+    },
+    "concern_type": {
+      "type": "string",
+      "maxLength": 255
+    },
+    "message": {
+      "type": "text",
+      "required": true
+    }
+  }
+}

@@ -6,7 +6,10 @@
   },
   "options": {
     "increments": true,
-    "timestamps": true,
+    "timestamps": [
+      "createdAt",
+      "updatedAt"
+    ],
     "draftAndPublish": false
   },
   "attributes": {
@@ -25,11 +28,11 @@
       "required": false,
       "maxLength": 255
     },
-    "contact_number": {
+    "contactNumber": {
       "type": "string",
       "maxLength": 255
     },
-    "concern_type": {
+    "concernType": {
       "type": "string",
       "maxLength": 255
     },

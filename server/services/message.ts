@@ -1,4 +1,4 @@
-const moduleName = 'plugin::contact.message';
+import { moduleName } from "../constants/moduleName";
 
 export default ({ strapi }) => ({
   async find() {

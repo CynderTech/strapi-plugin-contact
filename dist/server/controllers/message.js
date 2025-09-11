@@ -4,11 +4,11 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const sanitizeOutput_1 = __importDefault(require("../utils/sanitizeOutput"));
-const moduleName = 'plugin::contact.message';
+const moduleName_1 = require("../constants/moduleName");
 exports.default = ({ strapi }) => ({
     async find(ctx) {
         try {
-            const result = await strapi.service(moduleName).find(ctx.request.body);
+            const result = await strapi.service(moduleName_1.moduleName).find(ctx.request.body);
             ctx.send(result);
         }
         catch (error) {
@@ -19,8 +19,8 @@ exports.default = ({ strapi }) => ({
     async findOne(ctx) {
         const { id } = ctx.params;
         try {
-            const entity = await strapi.service(moduleName).findOne(id);
-            const result = await (0, sanitizeOutput_1.default)(entity, moduleName, strapi);
+            const entity = await strapi.service(moduleName_1.moduleName).findOne(id);
+            const result = await (0, sanitizeOutput_1.default)(entity, moduleName_1.moduleName, strapi);
             ctx.send(result);
         }
         catch (error) {
@@ -30,8 +30,8 @@ exports.default = ({ strapi }) => ({
     },
     async create(ctx) {
         try {
-            const entity = await strapi.service(moduleName).create(ctx.request.body);
-            const result = await (0, sanitizeOutput_1.default)(entity, moduleName, strapi);
+            const entity = await strapi.service(moduleName_1.moduleName).create(ctx.request.body);
+            const result = await (0, sanitizeOutput_1.default)(entity, moduleName_1.moduleName, strapi);
             ctx.send(result);
         }
         catch (error) {
@@ -42,8 +42,8 @@ exports.default = ({ strapi }) => ({
     async update(ctx) {
         const { id } = ctx.params;
         try {
-            const entity = await strapi.service(moduleName).update(id, ctx.request.body);
-            const result = await (0, sanitizeOutput_1.default)(entity, moduleName, strapi);
+            const entity = await strapi.service(moduleName_1.moduleName).update(id, ctx.request.body);
+            const result = await (0, sanitizeOutput_1.default)(entity, moduleName_1.moduleName, strapi);
             ctx.send(result);
         }
         catch (error) {
@@ -54,7 +54,7 @@ exports.default = ({ strapi }) => ({
     async delete(ctx) {
         const { id } = ctx.params;
         try {
-            const result = await strapi.service(moduleName).delete(id);
+            const result = await strapi.service(moduleName_1.moduleName).delete(id);
             ctx.send(result);
         }
         catch (error) {

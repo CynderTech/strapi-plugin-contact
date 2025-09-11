@@ -3,7 +3,7 @@
     "version": "1.0.0",
     "description": "Basic back-end functionality for a Contact Us form",
     "strapi": {
-        "name": "Contact Us",
+        "name": "contact-us",
         "icon": "plug",
         "description": "Basic back-end functionality for a Contact Us form",
         "kind": "plugin"
